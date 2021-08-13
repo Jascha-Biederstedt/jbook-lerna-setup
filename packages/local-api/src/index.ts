@@ -1,5 +1,9 @@
+import express from 'express';
+
 export const serve = (port: number, filename: string, dir: string) => {
-  console.log('port', port);
-  console.log('file', filename);
-  console.log('dir', dir);
+  const app = express();
+
+  app.listen(port, () => {
+    console.log('Listen on port', port);
+  });
 };
